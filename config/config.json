@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "add-list-item-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/addListItem/AddListItemWebPart.js",
+          "manifest": "./src/webparts/addListItem/AddListItemWebPart.manifest.json"
+        }
+      ]
+    },
+    "edit-list-item-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/editListItem/EditListItemWebPart.js",
+          "manifest": "./src/webparts/editListItem/EditListItemWebPart.manifest.json"
+        }
+      ]
+    },
+    "view-list-item-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/viewListItem/ViewListItemWebPart.js",
+          "manifest": "./src/webparts/viewListItem/ViewListItemWebPart.manifest.json"
+        }
+      ]
+    },
+    "list-items-view-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/listItemsView/ListItemsViewWebPart.js",
+          "manifest": "./src/webparts/listItemsView/ListItemsViewWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jplist": {
+      "path": "./jplist/1.2.0/jplist.js",
+      "globalName": "jplist"
+    },
+    "jplist-core": {
+      "path": "./src/ExternalRef/js/jplist-core.js",
+      "globalName": "jplist-core",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jplist-pagination": {
+      "path": "./src/ExternalRef/js/jplist-pagination.js",
+      "globalName": "jplist-pagination",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "bootstrap-select.min": {
+      "path": "./src/ExternalRef/js/bootstrap-select.min.js",
+      "globalName": "bootstrap-select.min",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  },
+  "localizedResources": {
+    "AddListItemWebPartStrings": "lib/webparts/addListItem/loc/{locale}.js",
+    "EditListItemWebPartStrings": "lib/webparts/editListItem/loc/{locale}.js",
+    "ViewListItemWebPartStrings": "lib/webparts/viewListItem/loc/{locale}.js",
+    "ListItemsViewWebPartStrings": "lib/webparts/listItemsView/loc/{locale}.js"
+  }
+}

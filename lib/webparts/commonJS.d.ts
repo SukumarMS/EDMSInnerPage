@@ -1,0 +1,16 @@
+declare function addItems(listName: string, listColumns: any): Promise<void>;
+declare function additemsattachment(listName: string, file: any, listColumns?: any): Promise<void>;
+declare function readItems(listName: string, listColumns: string[], topCount: number, orderBy: string, filterKey?: string, filterValue?: any): Promise<any>;
+declare function readItem(listName: string, listColumns: string[], topCount: number, orderBy: string, filterKey?: string, filterValue?: any, Lookupvalue?: string): Promise<any>;
+declare function updateItem(listName: string, id: number, listColumns: any): Promise<any>;
+declare function deleteItem(listName: string, itemID: number): Promise<void>;
+declare function batchDelete(listName: string, selectedArray: number[]): Promise<void>;
+declare function checkUserinGroup(Componentname: string, email: string, callback: any): void;
+declare function formString(listColumns: string[]): string;
+declare function formatDate(dateVal: any): string;
+declare function GetQueryStringParams(sParam: any): string;
+declare function base64ToArrayBuffer(base64: any): ArrayBuffer;
+declare function additemsimage(listName: string, filename: string, file: any, listColumns: any, callback: any): Promise<any>;
+declare function getListOfSubSites(): Promise<any>;
+declare function getListOfDocLib(topCount: number, orderBy: string): Promise<any>;
+export { getListOfDocLib, getListOfSubSites, readItem, formString, formatDate, additemsimage, base64ToArrayBuffer, addItems, checkUserinGroup, readItems, deleteItem, updateItem, additemsattachment, batchDelete, GetQueryStringParams };
